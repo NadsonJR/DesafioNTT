@@ -1,13 +1,14 @@
 package org.desafio.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public class EnderecoResponse {
+@Data @Getter @Setter
+public class EnderecoModel {
+
     private String cep;
     private String logradouro;
-    private String complemento;
-    private String unidade;
     private String bairro;
     private String localidade;
     private String uf;
@@ -17,4 +18,7 @@ public class EnderecoResponse {
     private String gia;
     private String ddd;
     private String siafi;
+    public EnderecoModel(String cep, String logradouro, String complemento, String bairro, String localidade, String uf, String ibge, String gia, String ddd, String siafi) {
+    }
+
 }

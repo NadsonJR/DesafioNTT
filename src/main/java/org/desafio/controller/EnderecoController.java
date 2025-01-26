@@ -27,6 +27,4 @@ public class EnderecoController {
                     .body("Erro ao processar a solicitação: " + e.getMessage());
         }
     }
-
-
 }
