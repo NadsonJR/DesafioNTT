@@ -1,5 +1,6 @@
 package org.desafio;
 
+import org.desafio.service.CepService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
