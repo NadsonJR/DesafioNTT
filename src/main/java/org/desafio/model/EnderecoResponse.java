@@ -3,7 +3,7 @@ package org.desafio.model;
 import lombok.Data;
 
 @Data
-public class CepResponse {
+public class EnderecoResponse {
     private String cep;
     private String logradouro;
     private String complemento;

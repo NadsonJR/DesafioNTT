@@ -1,27 +1,25 @@
 package org.desafio.controller;
 
 import lombok.extern.log4j.Log4j2;
-import org.desafio.model.CepResponse;
-import org.desafio.service.CepService;
+import org.desafio.service.EnderecoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Log4j2
-@RequestMapping("/cep")
-public class CepController {
-    private final CepService cepService;
-    public CepController(CepService cepService) {
-        this.cepService = cepService;
+@RequestMapping("/endereco")
+public class EnderecoController {
+    private final EnderecoService enderecoService;
+    public EnderecoController(EnderecoService enderecoService) {
+        this.enderecoService = enderecoService;
     }
-
-    @GetMapping("/{cep}")
+    @GetMapping("/cep/{cep}")
     public ResponseEntity<Object> getCep(@PathVariable String cep) {
-        log.info("Recebendo solicitação para buscar CEP:");
+        log.info("Recebendo solicitação para buscar CEP:"+ cep);
         try {
             // Chama o serviço para buscar informações do CEP
-            Object response = cepService.buscarCep(cep);
+            Object response = enderecoService.fetchCep(cep);
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             // Retorna um erro genérico para o cliente
