@@ -30,7 +30,7 @@ Este projeto é uma aplicação web desenvolvida em **Java** que permite a busca
 2. Configure um servidor de aplicação como **Apache Tomcat** ou equivalente.
 3. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/NadsonJR/DesafioNTT.git
    ```
 4. Importe o projeto em sua IDE favorita (Eclipse, IntelliJ, etc.).
 5. Compile o projeto e inicie o servidor.
