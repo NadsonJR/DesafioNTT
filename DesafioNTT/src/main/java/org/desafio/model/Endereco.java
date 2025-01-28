@@ -21,6 +21,8 @@ public class Endereco {
     private int pessoaId;
 
     // No-argument constructor
+    public Endereco() {
+    }
     public Endereco(Long id, String cep, String logradouro, String bairro, String localidade, String uf, String estado,int pessoaId) {
         this.id = id;
         this.cep = cep;

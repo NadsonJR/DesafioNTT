@@ -9,11 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @Log4j2
 @RestController
 @RequestMapping("/pessoas")
 public class PessoaController {
     private final PessoaService pessoaService;
+
     public PessoaController(PessoaService pessoaService) {
         this.pessoaService = pessoaService;
     }
@@ -54,14 +56,10 @@ public class PessoaController {
         Pessoa pessoa = pessoaService.getPessoaById(id).orElseThrow(() -> new RuntimeException("Pessoa not found"));
         return ResponseEntity.ok(pessoa);
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<Pessoa> updatePessoa(@PathVariable Long id, @RequestBody Pessoa pessoaDetails) {
         Pessoa updatedPessoa = pessoaService.updatePessoa(id, pessoaDetails);
         return ResponseEntity.ok(updatedPessoa);
-    }
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePessoa(@PathVariable Long id) {
-        pessoaService.deletePessoa(id);
-        return ResponseEntity.noContent().build();
     }
 }
