@@ -80,6 +80,9 @@ Este projeto utiliza várias tecnologias para implementar testes automatizados p
 #### Java
 - **Java**: A principal linguagem de programação usada para escrever os scripts de teste.
 
+#### RestAssured
+- **RestAssured**: Uma biblioteca Java usada para testar e validar APIs REST. Ela simplifica o processo de fazer requisições HTTP e asserções nas respostas.
+
 #### Selenium
 - **Selenium WebDriver**: Uma ferramenta de automação web usada para interagir com navegadores e realizar ações como clicar, digitar e navegar.
 
