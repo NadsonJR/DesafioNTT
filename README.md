@@ -70,6 +70,37 @@ Busca informações de um CEP na API do ViaCE
 ### POST /endereco/create}
 Cria um novo endereço.
 
+
+## Tecnologias Utilizadas para Testes Automatizados
+
+Este projeto utiliza várias tecnologias para implementar testes automatizados para uma aplicação web. Abaixo está uma descrição das tecnologias utilizadas:
+
+### Tecnologias
+
+#### Java
+- **Java**: A principal linguagem de programação usada para escrever os scripts de teste.
+
+#### Selenium
+- **Selenium WebDriver**: Uma ferramenta de automação web usada para interagir com navegadores e realizar ações como clicar, digitar e navegar.
+
+#### JUnit
+- **JUnit**: Um framework de testes usado para escrever e executar testes em Java.
+
+#### Cucumber
+- **Cucumber**: Uma ferramenta para executar testes automatizados escritos em linguagem natural. Utiliza a sintaxe Gherkin para definir cenários de teste.
+
+#### Apache POI
+- **Apache POI**: Uma biblioteca para ler e escrever documentos do Microsoft Office, usada aqui para gerar um documento Word com capturas de tela tiradas durante a execução dos testes.
+
+#### Log4j
+- **Log4j**: Um framework de logging usado para registrar informações durante a execução dos testes.
+
+#### Maven
+- **Maven**: Uma ferramenta de automação de build usada para gerenciar dependências do projeto e construir o projeto.
+
+#### WebDriver Manager
+- **WebDriver Manager**: Uma biblioteca que ajuda a gerenciar os drivers de navegador necessários para o Selenium WebDriver.
+
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
