@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-
+import './Register.css'; // Importando o arquivo CSS
 function Register({ onRegister, onBack }) {
   const [formData, setFormData] = useState({
     nome: '',
@@ -118,61 +118,61 @@ function Register({ onRegister, onBack }) {
   };
 
   return (
-    <div>
-      <h2>Cadastro</h2>
+    <div className = "register-container">
+      <h2 className = "register-title">Cadastro</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>Nome:</label>
-          <input required type="text" name="nome" value={formData.nome} onChange={handleChange} minLength="3" />
+          <input className="form-input" required type="text" name="nome" value={formData.nome} onChange={handleChange} minLength="3" />
         </div>
-        <div>
+        <div className="form-group">
           <label>CPF:</label>
-          <input required type="text" name="cpf" value={formData.cpf} onChange={handleChange} minLength="11" />
+          <input className="form-input" required type="text" name="cpf" value={formData.cpf} onChange={handleChange} minLength="11" />
         </div>
-        <div>
+        <div className="form-group">
           <label>Data de Nascimento:</label>
-          <input required type="date" name="dataNascimento" value={formData.dataNascimento} onChange={handleChange} />
+          <input className="form-input"  required type="date" name="dataNascimento" value={formData.dataNascimento} onChange={handleChange} />
         </div>
-        <div>
+        <div className="form-group">
           <label>Email:</label>
-          <input type="email" name="email" value={formData.email} onChange={handleEmailChange} />
+          <input className="form-input"  type="email" name="email" value={formData.email} onChange={handleEmailChange} />
           {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label>Telefone:</label>
-          <input required type="text" name="telefone" value={formData.telefone} onChange={handleChange} minLength="10" />
+          <input className="form-input"  required type="text" name="telefone" value={formData.telefone} onChange={handleChange} minLength="10" />
         </div>
-        <div>
+        <div className="form-group">
           <label>Senha:</label>
-          <input required type="password" name="senha" value={formData.senha} onChange={handleChange} minLength="6" />
+          <input className="form-input"  required type="password" name="senha" value={formData.senha} onChange={handleChange} minLength="6" />
         </div>
-        <div>
+        <div className="form-group">
           <label>Cep:</label>
-          <input type="text" name="cep" value={formData.cep} onChange={handleChange} minLength="8" />
-          <button type="button" onClick={handleCepSearch}>Buscar Cep</button>
+          <input className="form-input"  type="text" name="cep" value={formData.cep} onChange={handleChange} minLength="8" />
+          <button className="search-cep-button" type="button" onClick={handleCepSearch}>Buscar Cep</button>
         </div>
-        <div>
+        <div className="form-group">
           <label>Logradouro:</label>
-          <input required type="text" name="logradouro" value={formData.logradouro} onChange={handleChange} />
+          <input className="form-input"  required type="text" name="logradouro" value={formData.logradouro} onChange={handleChange} />
         </div>
-        <div>
+        <div className="form-group">
           <label>Bairro:</label>
-          <input required type="text" name="bairro" value={formData.bairro} onChange={handleChange} />
+          <input className="form-input"  required type="text" name="bairro" value={formData.bairro} onChange={handleChange} readOnly/>
         </div>
-        <div>
+        <div className="form-group">
           <label>Localidade:</label>
-          <input required type="text" name="localidade" value={formData.localidade} onChange={handleChange} />
+          <input className="form-input"  required type="text" name="localidade" value={formData.localidade} onChange={handleChange}  readOnly/>
         </div>
-        <div>
+        <div className="form-group">
           <label>UF:</label>
-          <input required type="text" name="uf" value={formData.uf} onChange={handleChange} />
+          <input className="form-input"  required type="text" name="uf" value={formData.uf} onChange={handleChange} readOnly />
         </div>
-        <div>
+        <div className="form-group">
           <label>Estado:</label>
-          <input required type="text" name="estado" value={formData.estado} onChange={handleChange} />
+          <input className="form-input"  required type="text" name="estado" value={formData.estado} onChange={handleChange} readOnly />
         </div>
-        <button type="submit">Cadastrar</button>
-        <button type="button" onClick={handleBackClick}>Voltar</button>
+        <button type="submit" className="register-button" >Cadastrar</button>
+        <button type="button" className="back-button" onClick={handleBackClick}>Voltar</button>
       </form>
       <ToastContainer />
     </div>
